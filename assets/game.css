@@ -1,0 +1,62 @@
+/*CUSTOM*/
+html,body{
+	height: 100%;
+	background: #333;
+	overflow-x:hidden;
+}
+header{
+}
+header h1{
+	text-align: center;
+	font-size: 78px;
+	color: #FFF;
+	font-weight: bold;
+	text-shadow: 0px 3px #888;
+	margin-top: 30px;
+}
+
+
+.board{
+	margin: 0px auto;
+}
+.board td {
+	width: 60px;
+	height: 60px;
+	margin: 15px;
+	background: #000;
+	display: inline-block;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 60px;
+	border: 4px double #FFF;
+}
+.recent{
+	box-shadow: 5px 5px 10px;
+}
+
+.players{
+	width: 100%;
+}
+.players td {
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+}
+
+.reset{
+	width: 50%;
+	height: 100px;
+	line-height: 100px;
+	font-size: 40px;
+	margin: 0px 25%;
+}
+
+/*OVERRIDES*/
+a, .fa-trash-o{
+	cursor: pointer;
+}
+.fa-trash-o{
+	float: right;
+	line-height: inherit;
+	margin-right: 15px;
+}
