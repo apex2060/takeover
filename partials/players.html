@@ -1,0 +1,29 @@
+<table class="players">
+	<tbody>
+		<tr ng-repeat="player in game.players" ng-click="tools.player.setTurn(player)">
+			<td style="background:{{player.color}}">
+				<span class="btn btn-default">{{player.name}} ({{tools.player.countTiles(player)}})</span>
+				<a class="btn btn-default" ng-hide="player.isComputer" ng-click="player.isComputer = true">
+					<i class="fa fa-desktop"></i>
+				</a>
+				<a class="btn btn-success" ng-show="player.isComputer" ng-click="player.isComputer = false">
+					<i class="fa fa-desktop"></i>
+				</a>
+				<i class="fa fa-trash-o" ng-click="tools.player.remove(player)"></i>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<form role="form" class="well" ng-submit="tools.player.add(temp.player)">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Name" ng-model="temp.player.name">
+					</div>
+					<div class="form-group">
+						<input type="color" class="form-control" ng-model="temp.player.color">
+					</div>
+					<button type="submit" class="btn btn-default btn-block">Add</button>
+				</form>
+			</td>	
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,14 @@
+<table class="board">
+	<tbody>
+		<tr ng-repeat="row in game.board">
+			<td ng-repeat="cell in row" 
+			style="background:{{cell.color}}; color:{{cell.highlight.color}}"
+			ng-mouseover="tools.tile.highlight(cell, temp.current)"
+			ng-click="tools.game.place(cell, temp.current)"
+			ng-class="{'recent': tools.tile.isRecent(cell)}"> 
+				<i class="fa fa-circle" ng-show="cell.highlight"></i> 
+				<span ng-hide="cell.highlight || cell.owner!=-1 || !tools.medulla.changeCount(cell,temp.current)"><!-- {{tools.medulla.changeCount(cell,temp.current)}} --></span>
+			</td>
+		</tr>
+	</tbody>
+</table>

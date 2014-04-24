@@ -11,6 +11,9 @@ handlers:
 - url: /assets
   static_dir: assets
 
+- url: /partials
+  static_dir: partials
+
 - url: /
   static_files: index.html
   upload: index\.html

@@ -18,17 +18,20 @@ header h1{
 
 .board{
 	margin: 0px auto;
+	cursor: crosshair;
 }
 .board td {
-	width: 60px;
-	height: 60px;
-	margin: 15px;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
 	background: #000;
 	display: inline-block;
 	text-align: center;
-	line-height: 60px;
-	border-radius: 60px;
+	line-height: 42px;
+	border-radius: 50px;
 	border: 4px double #FFF;
+	font-size: 30px;
+	cursor: crosshair;
 }
 .recent{
 	box-shadow: 5px 5px 10px;
