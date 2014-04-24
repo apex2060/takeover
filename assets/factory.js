@@ -4,11 +4,18 @@ app.factory('game', function($rootScope, $timeout, turn, tileService, ai){
 			var board = [];
 			// var settings = $rootScope.settings
 			var players = $rootScope.game.players;
-			var lw = 8
-			var settings = {
-				y: (6+players.length),
-				x: (6+players.length)
-			};
+			if(players){
+				var lw = 8
+				var settings = {
+					y: (6+players.length),
+					x: (6+players.length)
+				};
+			}else{
+				var settings = {
+					y: (6),
+					x: (6)
+				};
+			}
 
 			for(var y=0; y<settings.y; y++){
 				var col = [];
